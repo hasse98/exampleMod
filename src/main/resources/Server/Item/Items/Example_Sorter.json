@@ -12,7 +12,7 @@
   "Set": "",
   "BlockType": {
     "Material": "Solid",
-    "DrawType": "Model",
+    "DrawType": "Cube",
     "Group": "",
     "Flags": {
       "IsUsable": true
@@ -42,15 +42,11 @@
     "State": {
       "Id": "StateData"
     },
-    "CustomModel": "Blocks/Example_Sorter.blockymodel",
-    "Opacity": "Transparent",
-    "CustomModelTexture": [
+    "Textures": [
       {
-        "Texture": "Blocks/Example_Sorter.png"
+        "All": "BlockTextures/Example_Sorter.png"
       }
     ],
-    "CustomModelScale": 1,
-    "RequiresAlphaBlending": false,
     "FlipType": "Symmetric",
     "RotationYawPlacementOffset": "OneEighty"
   },
