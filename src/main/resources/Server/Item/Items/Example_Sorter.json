@@ -1,0 +1,92 @@
+{
+  "TranslationProperties": {
+    "Name": "sorter-items.Sorter.name",
+    "Description": "sorter-items.Sorter.desc"
+  },
+  "ItemLevel": 0,
+  "Icon": "Icons/ItemsGenerated/Example_Sorter_Icon.png",
+  "Categories": [
+    "Furniture.Containers"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Group": "",
+    "Flags": {
+      "IsUsable": true
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Woods"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "BlockSoundSetId": "Wood",
+    "BiomeTintUp": 0,
+    "ParticleColor": "#63412c",
+    "TransitionToTag": "",
+    "Interactions": {
+      "Use": "Example_Sorter_Interact",
+      "Primary": "Break_Container"
+    },
+    "VariantRotation": "NESW",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "State": {
+      "Id": "StateData"
+    },
+    "CustomModel": "Blocks/Example_Sorter.blockymodel",
+    "Opacity": "Transparent",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Example_Sorter.png"
+      }
+    ],
+    "CustomModelScale": 1,
+    "RequiresAlphaBlending": false,
+    "FlipType": "Symmetric",
+    "RotationYawPlacementOffset": "OneEighty"
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Wood",
+  "Recipe": {
+    "Input": [
+      {
+        "ResourceTypeId": "Wood_Trunk",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "Workbench",
+        "Categories": [
+          "Workbench_Tinkering"
+        ]
+      }
+    ]
+  },
+  "MaxStack": 100
+}
