@@ -39,9 +39,6 @@
         }
       ]
     },
-    "State": {
-      "Id": "StateData"
-    },
     "Textures": [
       {
         "All": "BlockTextures/Example_Sorter.png"

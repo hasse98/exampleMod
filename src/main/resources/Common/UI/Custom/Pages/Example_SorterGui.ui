@@ -1,0 +1,28 @@
+{
+  "DocumentName": "Example_SorterGui",
+  "Widgets": [
+    {
+      "Id": "Root",
+      "Type": "Panel",
+      "Layout": "Vertical",
+      "Children": [
+        {
+          "Id": "SearchBar",
+          "Type": "TextEntry",
+          "PlaceholderText": "Search…",
+          "OnTextChanged": "SortItems"
+        },
+        {
+          "Id": "CategoryTabs",
+          "Type": "HorizontalLayout",
+          "Spacing": 2
+        },
+        {
+          "Id": "ItemList",
+          "Type": "ScrollView",
+          "ChildPrefab": "Pages/Example_SorterItemCard.ui"
+        }
+      ]
+    }
+  ]
+}

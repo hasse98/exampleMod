@@ -60,7 +60,7 @@ public class SorterGui extends InteractiveCustomUIPage<SorterGui.SorterGuiData> 
                       @Nonnull UIEventBuilder uiEventBuilder,
                       @Nonnull Store<EntityStore> store) {
         // Load the UI template for the sorter GUI
-        uiCommandBuilder.append("Pages/Buuz135_SorterGui.ui");
+        uiCommandBuilder.append("Pages/Example_SorterGui.ui");
         uiCommandBuilder.set("#SearchInput.Value", this.searchQuery);
         // Bind search changes
         uiEventBuilder.addEventBinding(CustomUIEventBindingType.ValueChanged, "#SearchInput",
@@ -146,7 +146,7 @@ public class SorterGui extends InteractiveCustomUIPage<SorterGui.SorterGuiData> 
             commandBuilder.append("#CategoryTabs", "Group { LayoutMode: Left; Anchor: (Top: 0); }");
             // Use translation keys if available, otherwise fallback to raw category name
             Message display = Message.raw(category);
-            commandBuilder.append("#CategoryTabs[" + tabIndex + "]", "Pages/Buuz135_SorterTab.ui");
+            commandBuilder.append("#CategoryTabs[" + tabIndex + "]", "Pages/Example_SorterGui.ui");
             commandBuilder.set("#CategoryTabs[" + tabIndex + "] #TabLabel.TextSpans", display);
             // Highlight the currently selected tab
             boolean selected = category.equals(this.selectedCategory);
@@ -192,7 +192,7 @@ public class SorterGui extends InteractiveCustomUIPage<SorterGui.SorterGuiData> 
             if (cardsInRow == 0) {
                 commandBuilder.append("#ItemCards", "Group { LayoutMode: Left; Anchor: (Top: 0); }");
             }
-            commandBuilder.append("#ItemCards[" + rowIndex + "]", "Pages/Buuz135_SorterItemCard.ui");
+            commandBuilder.append("#ItemCards[" + rowIndex + "]", "Pages/Example_SorterGui.ui");
             // Set item icon and quantity
             commandBuilder.set("#ItemCards[" + rowIndex + "] #ItemIcon.ItemId", id);
             commandBuilder.set("#ItemCards[" + rowIndex + "] #ItemQuantity.Text", Integer.toString(amount));

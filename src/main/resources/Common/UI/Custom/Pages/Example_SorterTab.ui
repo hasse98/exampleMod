@@ -1,0 +1,10 @@
+{
+  "DocumentName": "Example_SorterTab",
+  "Widgets": [
+    {
+      "Id": "TabButton",
+      "Type": "Button",
+      "Text": "Category"
+    }
+  ]
+}

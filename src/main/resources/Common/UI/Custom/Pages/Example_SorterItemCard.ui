@@ -1,0 +1,21 @@
+{
+  "DocumentName": "Example_SorterItemCard",
+  "Widgets": [
+    {
+      "Id": "CardRoot",
+      "Type": "HorizontalLayout",
+      "Spacing": 4,
+      "Children": [
+        { "Id": "Icon", "Type": "ItemIcon" },
+        {
+          "Id": "InfoPanel",
+          "Type": "VerticalLayout",
+          "Children": [
+            { "Id": "Name", "Type": "Text", "FontSize": 12 },
+            { "Id": "Amount", "Type": "Text", "FontSize": 10 }
+          ]
+        }
+      ]
+    }
+  ]
+}
