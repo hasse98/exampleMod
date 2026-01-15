@@ -146,7 +146,7 @@ public class SorterGui extends InteractiveCustomUIPage<SorterGui.SorterGuiData> 
             commandBuilder.append("#CategoryTabs", "Group { LayoutMode: Left; Anchor: (Top: 0); }");
             // Use translation keys if available, otherwise fallback to raw category name
             Message display = Message.raw(category);
-            commandBuilder.append("#CategoryTabs[" + tabIndex + "]", "Pages/Example_SorterGui.ui");
+            commandBuilder.append("#CategoryTabs[" + tabIndex + "]", "Pages/Example_SorterTab.ui");
             commandBuilder.set("#CategoryTabs[" + tabIndex + "] #TabLabel.TextSpans", display);
             // Highlight the currently selected tab
             boolean selected = category.equals(this.selectedCategory);
@@ -192,7 +192,7 @@ public class SorterGui extends InteractiveCustomUIPage<SorterGui.SorterGuiData> 
             if (cardsInRow == 0) {
                 commandBuilder.append("#ItemCards", "Group { LayoutMode: Left; Anchor: (Top: 0); }");
             }
-            commandBuilder.append("#ItemCards[" + rowIndex + "]", "Pages/Example_SorterGui.ui");
+            commandBuilder.append("#ItemCards[" + rowIndex + "]", "Pages/Example_SorterItemCard.ui");
             // Set item icon and quantity
             commandBuilder.set("#ItemCards[" + rowIndex + "] #ItemIcon.ItemId", id);
             commandBuilder.set("#ItemCards[" + rowIndex + "] #ItemQuantity.Text", Integer.toString(amount));

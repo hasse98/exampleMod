@@ -1,21 +1,30 @@
-{
-  "DocumentName": "Example_SorterItemCard",
-  "Widgets": [
-    {
-      "Id": "CardRoot",
-      "Type": "HorizontalLayout",
-      "Spacing": 4,
-      "Children": [
-        { "Id": "Icon", "Type": "ItemIcon" },
-        {
-          "Id": "InfoPanel",
-          "Type": "VerticalLayout",
-          "Children": [
-            { "Id": "Name", "Type": "Text", "FontSize": 12 },
-            { "Id": "Amount", "Type": "Text", "FontSize": 10 }
-          ]
-        }
-      ]
+$C = "../Common.ui";
+
+Group {
+  Anchor: (Width: 120, Height: 72);
+  Padding: 2;
+  Background: (Color: #1a1a1a(0.6));
+  LayoutMode: Left;
+
+  ItemIcon #ItemIcon {
+    Anchor: (Width: 40, Height: 40, Top: 4, Left: 4);
+    Visible: true;
+  }
+
+  Group {
+    LayoutMode: Top;
+    Padding: (Left: 4, Top: 4);
+
+    Label #ItemQuantity {
+      Text: "0";
+      Style: (FontSize: 12, TextColor: #ffffff, RenderBold: true);
     }
-  ]
+
+    Button #RetrieveButton {
+      Text: "Retrieve";
+      Anchor: (Width: 60, Height: 20);
+      Style: $C.@SecondaryTextButton;
+      TooltipText: "Retrieve this item\n\nLeft click: full stack\nRight click: one";
+    }
+  }
 }

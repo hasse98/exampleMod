@@ -1,10 +1,19 @@
-{
-  "DocumentName": "Example_SorterTab",
-  "Widgets": [
-    {
-      "Id": "TabButton",
-      "Type": "Button",
-      "Text": "Category"
-    }
-  ]
+$C = "../Common.ui";
+
+Group {
+  Anchor: (Width: 120, Height: 32);
+  Padding: 2;
+  LayoutMode: Top;
+
+  Group #TabHighlight {
+    Anchor: (Width: 120, Height: 32);
+    Background: (Color: #3f3f3f(0.6));
+    Visible: false;
+  }
+
+  Label #TabLabel {
+    Anchor: (Center: true);
+    Style: (FontSize: 14, TextColor: #ffffff, RenderBold: true);
+    Text: "Tab";
+  }
 }

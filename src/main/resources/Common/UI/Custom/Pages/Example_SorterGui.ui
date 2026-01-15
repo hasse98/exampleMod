@@ -1,28 +1,31 @@
-{
-  "DocumentName": "Example_SorterGui",
-  "Widgets": [
-    {
-      "Id": "Root",
-      "Type": "Panel",
-      "Layout": "Vertical",
-      "Children": [
-        {
-          "Id": "SearchBar",
-          "Type": "TextEntry",
-          "PlaceholderText": "Search…",
-          "OnTextChanged": "SortItems"
-        },
-        {
-          "Id": "CategoryTabs",
-          "Type": "HorizontalLayout",
-          "Spacing": 2
-        },
-        {
-          "Id": "ItemList",
-          "Type": "ScrollView",
-          "ChildPrefab": "Pages/Example_SorterItemCard.ui"
+$C = "../Common.ui";
+
+$C.@PageOverlay {
+  $C.@Container {
+    Anchor: (Width: 1050, Height: 700);
+
+    #Title {
+      Group {
+        $C.@Title { @Text = "Sorter"; }
+        TextEntry #SearchInput {
+          Anchor: (Width: 250, Height: 20);
+          PlaceholderText: "Search…";
         }
-      ]
+      }
     }
-  ]
+
+    #CategoryTabs {
+      LayoutMode: Left;
+      Anchor: (Top: 60);
+      Padding: (Left: 4, Right: 4);
+    }
+
+    #ItemCards {
+      LayoutMode: TopScrolling;
+      Anchor: (Top: 100, Bottom: 10);
+      ScrollbarStyle: $C.@DefaultScrollbarStyle;
+    }
+  }
 }
+
+$C.@BackButton {}
