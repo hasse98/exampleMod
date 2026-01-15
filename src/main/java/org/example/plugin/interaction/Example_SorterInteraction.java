@@ -29,11 +29,6 @@ import java.util.Map;
  */
 public class Example_SorterInteraction extends SimpleBlockInteraction {
 
-    /**
-     * Codec used by Hytale to serialise/deserialise this interaction. The
-     * registration in {@link com.example.sorter.Main} ties the codec to a
-     * JSON definition for the block interaction.
-     */
     public static final BuilderCodec<Example_SorterInteraction> CODEC = BuilderCodec.builder(Example_SorterInteraction.class, Example_SorterInteraction::new).build();
 
     @Override
