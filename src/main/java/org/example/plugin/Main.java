@@ -16,11 +16,9 @@ public class Main extends JavaPlugin {
     @Override
     protected void setup() {
         super.setup();
-
-        // Register your custom interaction codec under the EXACT name used in the JSON "Type".
         this.getCodecRegistry(Interaction.CODEC).register(
                 "Example_SorterInteraction",
-                org.example.plugin.interaction.Example_SorterInteraction.class,
+                Example_SorterInteraction.class,
                 Example_SorterInteraction.CODEC
         );
     }
